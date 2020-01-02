@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB.Extensions.OptimisticLocking", "MongoDB.Extensions.OptimisticLocking\MongoDB.Extensions.OptimisticLocking.csproj", "{07F3D00E-1EED-4CBA-8035-656E627D4FA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB.Extensions.OptimisticLocking.Tests", "MongoDB.Extensions.OptimisticLocking.Tests\MongoDB.Extensions.OptimisticLocking.Tests.csproj", "{713781B0-3BF8-40B2-BD68-5B10222BDED6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07F3D00E-1EED-4CBA-8035-656E627D4FA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07F3D00E-1EED-4CBA-8035-656E627D4FA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07F3D00E-1EED-4CBA-8035-656E627D4FA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07F3D00E-1EED-4CBA-8035-656E627D4FA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{713781B0-3BF8-40B2-BD68-5B10222BDED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{713781B0-3BF8-40B2-BD68-5B10222BDED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{713781B0-3BF8-40B2-BD68-5B10222BDED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{713781B0-3BF8-40B2-BD68-5B10222BDED6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
