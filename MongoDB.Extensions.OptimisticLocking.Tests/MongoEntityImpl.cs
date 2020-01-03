@@ -1,8 +1,7 @@
 namespace MongoDB.Extensions.OptimisticLocking.Tests
 {
-    public class MongoEntityImpl
+    public class MongoEntityImpl : MongoEntityWithGuidKey
     {
-        public long Id { get; set; }
         public string Name { get; set; }
     }
 }
