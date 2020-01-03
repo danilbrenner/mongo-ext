@@ -1,0 +1,29 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - 'release-*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.100'
+      - name: Test
+        run: dotnet test MongoDB.Extensions.sln
+      - name: Publish dll
+        run: |
+          mkdir tools
+          dotnet tool install --tool-path ./tools GitVersion.Tool
+          APP_VERSION_TAG=$(./tools/dotnet-gitversion /showvariable FullSemVer)
+          APP_VERSION_TAG=$(echo $APP_VERSION_TAG | sed 's/+/-/')
+          dotnet pack -c Release -o artifacts /p:Version=$APP_VERSION_TAG ./MongoDB.Extensions.OptimisticLocking/MongoDB.Extensions.OptimisticLocking.csproj
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v1
+            with:
+              name: artifacts
+              path: artifacts/*
