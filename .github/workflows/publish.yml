@@ -22,8 +22,3 @@ jobs:
           APP_VERSION_TAG=$(./tools/dotnet-gitversion /showvariable FullSemVer)
           APP_VERSION_TAG=$(echo $APP_VERSION_TAG | sed 's/+/-/')
           dotnet pack -c Release -o artifacts /p:Version=$APP_VERSION_TAG ./MongoDB.Extensions.OptimisticLocking/MongoDB.Extensions.OptimisticLocking.csproj
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v1
-        with:
-          name: artifacts
-          path: artifacts/*
