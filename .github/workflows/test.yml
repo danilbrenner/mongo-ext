@@ -1,4 +1,4 @@
-name: Run nests
+name: Run tests
 
 on: [push]
 
