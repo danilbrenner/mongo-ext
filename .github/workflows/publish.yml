@@ -23,5 +23,5 @@ jobs:
           APP_VERSION_TAG=$(echo $APP_VERSION_TAG | sed 's/+/-/')
           dotnet pack -c Release -o artifacts /p:Version=$APP_VERSION_TAG ./MongoDB.Extensions.OptimisticLocking/MongoDB.Extensions.OptimisticLocking.csproj
           sed 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' ./.github/workflows/nuget.config > nuget.config
-          dotnet nuget push "artifacts/MongoDB.Extensions.OptimisticLocking.${APP_VERSION_TAG}.nupkg" --source "github"
+          dotnet nuget push "artifacts/MongoDB.Extensions.OptimisticLocking.${APP_VERSION_TAG}.nupkg" --source "github" --api-key ${{ secrets.GITHUB_TOKEN }}
           rm nuget.config
